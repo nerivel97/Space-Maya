@@ -1,6 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Esto evita el desbordamiento horizontal */
+}
+
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -8,8 +14,17 @@ body::before {
   background-image: url("img/patron_fondo.jpg");
   background-repeat: repeat;
   background-size: auto;
-  opacity: 0.1; /* ajusta aquí la opacidad */
+  opacity: 0.1;
   z-index: -1;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Asegura que el header esté por encima de la imagen */
+  background-color: transparent;
 }
 
 .brand-name {
@@ -102,27 +117,32 @@ body::before {
 }
 /* ----- Sección Hero ----- */
 .hero {
-  /* Ajusta la ruta de tu imagen de fondo */
-  background: url("img/banner_principal.webp") no-repeat center center/cover;
-  position: relative;
-  width: 100%;
-  height: 500px; /* Ajusta la altura según tu preferencia */
+  width: 100vw;
+  height: 500px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 50px;
+  justify-content: center;
   color: #fff;
-  border-radius: 30px;
-  /* Opcional: Si deseas un overlay semitransparente sobre la imagen */
-  /* 
-  background-color: rgba(0,0,0,0.3);
-  background-blend-mode: darken;
-  */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* Centra el hero en la página */
+}
+
+/* Estilo específico para la pantalla 1 */
+.hero-pantalla1 {
+  background: url("img/banner_principal.jpg") no-repeat center center/cover;
+} /* Estilo específico para la pantalla 2 */
+.hero-pantalla2 {
+  background: url("img/banner2.jpg") no-repeat center center/cover;
 }
 
 /* Contenedor del texto dentro del Hero */
 .hero-content {
-  max-width: 600px; /* Controla el ancho máximo del texto */
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: left;
+  z-index: 20;
 }
 
 /* Título principal */
@@ -213,10 +233,12 @@ body::before {
   background-color: #01b1ab;
   color: white;
   padding: 20px 0;
-  margin-top: auto;
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: bold;
 }
-
 .footer-image {
   max-width: 70%;
   height: auto;
@@ -267,4 +289,39 @@ body::before {
   .footer-container {
     grid-template-columns: 1fr;
   }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1200px;
+  margin: -100px auto 30px; /* Ajusta el margin-top negativo para superponer */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  z-index: 10; /* Asegura que las tarjetas estén sobre el hero */
+}
+.card-image {
+  flex: 1;
+  background-color: #f1f1f1;
+}
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-text {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.card-text h2 {
+  margin-top: 0;
+  color: #333;
+}
+.card-text p {
+  color: #666;
 }
