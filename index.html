@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="main.js"></script>
+
+    <!-- Estilos Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <!-- Iconos FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Conexion con CSS-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <header>
+    <div class="container-sm">
+      <nav class="navbar" style="background-color: transparent">
+        <div
+          class="container-fluid d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo con nombre al lado -->
+          <div class="navbar-brand d-flex align-items-center">
+            <img src="img/logov1.png" alt="Logo" width="90" height="90" />
+            <span class="ms-2 brand-name">SPACE MAYA</span>
+          </div>
+          <!-- Lista de navegación -->
+          <div class="flex-grow-1">
+            <ul
+              class="nav nav-underline justify-content-center"
+              style="--bs-nav-link-color: #01b1ab"
+            >
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link p-2" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link p-2" href="#"
+                  >Mapa Interactivo</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link p-2" href="#">Aprende</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link p-2" href="#">Juegos</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Botones de Iniciar sesión y Registrarse -->
+          <div>
+            <button class="btn btn-white custom-btn me-2" type="button">
+              Iniciar sesión
+            </button>
+            <button class="btn btn-primary custom-btn" type="button">
+              Registrarse
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <div class="container">
+      <!-- Sección Hero -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>APRENDE MAYA</h1>
+          <p>¡Descubre nuestras secciones interactivas!</p>
+          <a href="#" class="btn btn-primary btn-hero">DESCUBRE</a>
+        </div>
+      </section>
+
+      <!-- Sección de Tarjetas -->
+      <section class="cards-section">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img
+                src="img/logov1.png"
+                alt="Icono Vocabulario"
+                class="card-img-top mx-auto"
+                style="width: 60px; margin-top: 20px"
+              />
+              <div class="card-body">
+                <h3 class="card-title">VOCABULARIO</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img
+                src="img/logov1.png"
+                alt="Icono Mapa Dinámico"
+                class="card-img-top mx-auto"
+                style="width: 60px; margin-top: 20px"
+              />
+              <div class="card-body">
+                <h3 class="card-title">MAPA DINÁMICO</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img
+                src="img/logov1.png"
+                alt="Icono Juego Educativo"
+                class="card-img-top mx-auto"
+                style="width: 60px; margin-top: 20px"
+              />
+              <div class="card-body">
+                <h3 class="card-title">JUEGO EDUCATIVO</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+
+      <div class="card mb-3 mt-4" style="width: 100%">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="img/vocabulario.jpg"
+              class="img-fluid w-100 rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body text-start m-3">
+              <h5 class="card-title">Vocabulario Maya</h5>
+              <p class="card-text">
+                Aprende nuevas palabras y enriquece tu conocimiento del idioma
+                maya. Explora una amplia selección de términos con sus
+                significados en español, pronunciaciones y ejemplos ilustrados.
+                Mejora tu comprensión de manera visual e interactiva. ¡Descubre
+                el lenguaje ancestral de los mayas de una forma sencilla y
+                entretenida!.
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="width: 100%">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="img/mapa.jpg"
+              class="img-fluid w-100 rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body text-start m-3">
+              <h5 class="card-title">Explora la peninsula maya</h5>
+              <p class="card-text">
+                Descubre las zonas arqueológicas más importantes de la
+                civilización maya a través de un mapa interactivo. Conoce
+                lugares emblemáticos como Chichén Itzá, Uxmal y Tulum,
+                accediendo a información histórica, imágenes y detalles
+                fascinantes sobre su arquitectura y significado cultural..
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="width: 100%">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="img/juegos.jpg"
+              class="img-fluid w-100 rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body text-start m-3">
+              <h5 class="card-title">Juegos Educativos</h5>
+              <p class="card-text">
+                Aprende jugando y diviértete mientras refuerzas tu conocimiento
+                sobre la cultura maya. Disfruta de desafíos interactivos,
+                rompecabezas, juegos de memoria y actividades didácticas
+                diseñadas para que el aprendizaje sea dinámico y atractivo. ¡Pon
+                a prueba tu conocimiento y conviértete en un experto en la
+                historia y el idioma maya!
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Primera columna con icono -->
+      <div class="footer-col footer-col1">
+        <img src="img/logov2.png" alt="Tu imagen" class="footer-image" />
+      </div>
+      <!-- Segunda columna con enlaces de navegación -->
+      <div class="footer-col footer-col2">
+        <h4 class="text-bold">Enlaces rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Mapa Interactivo</a></li>
+          <li><a href="#contacto">Aprende</a></li>
+          <li><a href="#acerca">Juegos</a></li>
+        </ul>
+      </div>
+      <!-- Tercera columna con redes sociales -->
+      <div class="footer-col footer-col3">
+        <h4 class="text-bold">Síguenos</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"
+  ></script>
+</html>
