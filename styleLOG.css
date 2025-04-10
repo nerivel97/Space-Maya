@@ -133,6 +133,14 @@ header {
 .hero-pantalla1 {
   background: url("img/banner_principal.jpg") no-repeat center center/cover;
 }
+/* Estilo específico para la pantalla 2 */
+.hero-pantalla2 {
+  background: url("img/banner2.jpg") no-repeat center center/cover;
+}
+/* Estilo específico para la pantalla 3 */
+.hero-pantalla3 {
+  background: url("img/banner3.jpg") no-repeat center center/cover;
+}
 
 /* Contenedor del texto dentro del Hero */
 .hero-content {
@@ -174,56 +182,6 @@ header {
 .btn-hero:hover {
   background-color: #019c96; /* Un tono más oscuro en hover */
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* ----- Sección de Tarjetas ----- */
-.cards-section {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  margin: -50px auto 0;
-  /* 
-     margin-top: -50px para "superponer" ligeramente las tarjetas sobre 
-     la sección hero (si la imagen lo permite). Ajusta o quita si no lo deseas.
-  */
-  position: relative;
-  z-index: 1; /* Para que se muestren encima del Hero si se superponen */
-  width: 80%; /* Ajusta el ancho total */
-  max-width: 1200px;
-}
-
-/* Cada tarjeta individual */
-.card {
-  background-color: #fff;
-  width: 250px;
-  text-align: center;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Icono de la tarjeta */
-.card img {
-  width: 60px; /* Ajusta el tamaño del icono */
-  margin-bottom: 15px;
-}
-
-/* Título de la tarjeta */
-.card h3 {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Efecto hover en la tarjeta */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.container {
-  max-width: 80%; /* O el valor que prefieras */
 }
 
 /* Seccion del FOOTER*/
@@ -287,4 +245,125 @@ header {
   .footer-container {
     grid-template-columns: 1fr;
   }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1200px;
+  margin: -100px auto 30px; /* Ajusta el margin-top negativo para superponer */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  z-index: 10; /* Asegura que las tarjetas estén sobre el hero */
+}
+.card-image {
+  flex: 1;
+  background-color: #f1f1f1;
+}
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-text {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.card-text h2 {
+  margin-top: 0;
+  color: #333;
+}
+.card-text p {
+  color: #666;
+}
+
+/* SECCION DE REGISTRO */
+.registration-page {
+  position: relative;
+  display: flex;
+  width: 100%; /* Asegúrate de que ocupe el 100% del ancho */
+  background-color: white;
+  border-radius: 30px; /* Mantiene el borde redondeado */
+  margin-top: -70px;
+  z-index: 10;
+}
+
+.form-column,
+.image-column {
+  flex: 1; /* Cada columna ocupa el mismo espacio */
+  display: flex;
+  justify-content: center; /* Centra el contenido en cada columna */
+  align-items: center; /* Centra verticalmente */
+}
+
+.form-container {
+  width: 100%; /* Asegúrate de que el contenedor del formulario ocupe todo el ancho */
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logo-container img {
+  width: 100px;
+}
+h1 {
+  text-align: center;
+  color: #01b1ab;
+}
+.name-fields {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.btn-primary2 {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #01b1ab;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-primary2:hover {
+  background-color: #019c98;
+}
+.link-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.link-container a {
+  color: #01b1ab;
+  text-decoration: none;
+}
+.registration-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Asegúrate de que la imagen no desborde */
+  border-radius: 30px;
+}
+.registration-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+  border-radius: 30px;
 }

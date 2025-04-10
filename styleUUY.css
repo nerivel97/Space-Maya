@@ -176,56 +176,6 @@ header {
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* ----- Sección de Tarjetas ----- */
-.cards-section {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  margin: -50px auto 0;
-  /* 
-     margin-top: -50px para "superponer" ligeramente las tarjetas sobre 
-     la sección hero (si la imagen lo permite). Ajusta o quita si no lo deseas.
-  */
-  position: relative;
-  z-index: 1; /* Para que se muestren encima del Hero si se superponen */
-  width: 80%; /* Ajusta el ancho total */
-  max-width: 1200px;
-}
-
-/* Cada tarjeta individual */
-.card {
-  background-color: #fff;
-  width: 250px;
-  text-align: center;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Icono de la tarjeta */
-.card img {
-  width: 60px; /* Ajusta el tamaño del icono */
-  margin-bottom: 15px;
-}
-
-/* Título de la tarjeta */
-.card h3 {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Efecto hover en la tarjeta */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.container {
-  max-width: 80%; /* O el valor que prefieras */
-}
-
 /* Seccion del FOOTER*/
 .footer {
   background-color: #01b1ab;
@@ -287,4 +237,79 @@ header {
   .footer-container {
     grid-template-columns: 1fr;
   }
+}
+
+/*  SECCION DE U'UY */
+.game-container {
+  display: flex; /* Usamos flexbox para el layout */
+  flex-direction: column; /* Cambia la dirección a columna */
+  align-items: center; /* Alineación en el centro */
+  width: auto; /* Cambiar a auto para que se ajuste al contenido */
+  height: auto; /* Cambiar a auto para que se ajuste al contenido */
+  margin: 0 auto; /* Centra el contenedor */
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 30px;
+}
+.header {
+  margin-bottom: 10px; /* Espacio entre el header y la cuadrícula */
+  display: flex;
+  justify-content: center; /* Centra el botón */
+}
+.gift-button {
+  font-size: 24px; /* Tamaño del icono */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambiar cursor a mano */
+}
+.content {
+  display: flex; /* Usamos flexbox para el contenido */
+  width: 100%; /* Ancho completo */
+}
+.main-area {
+  flex: 1; /* Área principal ocupa más espacio */
+  display: flex;
+  flex-direction: column; /* Mantener el grid en columna */
+  margin: 30px;
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre filas */
+}
+.row {
+  display: flex;
+  justify-content: center; /* Centrar letras */
+  gap: 20px; /* Espacio entre letras */
+}
+.key {
+  width: 100px; /* Ancho de cada letra */
+  height: 100px; /* Altura de cada letra */
+  font-size: 40px; /* Tamaño de fuente */
+  color: white; /* Color del texto */
+  background-color: #019c96; /* Color de fondo de las teclas */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor a mano */
+  transition: background-color 0.2s; /* Transición suave para el color de fondo */
+}
+.key:hover {
+  background-color: #01847f; /* Color de fondo al pasar el mouse */
+}
+.right-panel {
+  flex: 1; /* Área lateral ocupa menos espacio */
+  width: 100%; /* Ancho fijo para el panel derecho */
+   /* Altura fija para el panel derecho */
+  border: 2px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  margin-left: 20px; /* Espacio entre la cuadrícula y el panel derecho */
+  display: flex; /* Flexbox para centrar el contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
 }
