@@ -116,6 +116,26 @@ header {
   color: #01b1ab !important;
   border-color: #ffffff !important;
 }
+
+.dropdown-menu {
+  background-color: #01b1ab; /* Color de fondo del dropdown */
+  border: none; /* Eliminar borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+.dropdown-item {
+  color: #ffffff; /* Color del texto */
+  font-size: 28px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  font-family: "Arial", sans-serif; /* Tipografía */
+  text-shadow: 2px 5px 5px rgba(104, 104, 104, 0.2); /* Sombra de texto */
+}
+.dropdown-item:hover {
+  background-color: #007f7a; /* Color de fondo al pasar el mouse */
+  color: #ffffff; /* Mantener texto blanco al pasar el mouse */
+} /* Si deseas que el separador tenga un color específico */
+.dropdown-divider {
+  background-color: #ffffff; /* Cambia esto al color que desees */
+}
 /* ----- Sección Hero ----- */
 .hero {
   width: 100vw;
@@ -141,11 +161,7 @@ header {
 .hero-pantalla3 {
   background: url("img/banner3.jpg") no-repeat center center/cover;
 }
-/* Estilo específico para la pantalla 4 */
-.hero-pantalla4 {
-  background: url("img/banner4.jpg") no-repeat center center/cover;
-  
-}
+
 /* Contenedor del texto dentro del Hero */
 .hero-content {
   max-width: 1200px;
@@ -187,6 +203,7 @@ header {
   background-color: #019c96; /* Un tono más oscuro en hover */
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Seccion del FOOTER*/
 .footer {
@@ -286,42 +303,45 @@ header {
   color: #666;
 }
 
-/*LEYENDAS Y MITOS*/
-
-
-.grid1 {
+/* SECCION DE VOCABULARIOS */
+.cards-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 80px;
-  margin: 80px auto;
-  max-width: 1000px;
-  padding: 0 60px;
-  margin-top: -50px;
+  gap: 20px;
+  margin-top: -70px; /* Ajusta el valor para superponer las tarjetas */
+  position: relative;
+  z-index: 1;
 }
-.grid2 {
+
+.vocab-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 80px;
-  margin: 80px auto;
+  gap: 20px;
+  justify-content: center;
   max-width: 1000px;
-  padding: 0 60px;
+}
+.vocab-card {
+  background-color: #00b3b3;
+  border-radius: 8px;
+  width: 200px;
+  min-height: 150px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+}
+.word {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.definition {
+  font-size: 0.9em;
 }
 
-.card {
-  background-color: #01b1ab;
-  width: 160px;
-  height: 200px;
-  border-radius: 15px;
-}
-
-
-
-.label {
-  background-color: #01b1ab;
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
-  margin: 10px auto 0;
+.vocab-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }

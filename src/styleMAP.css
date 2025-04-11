@@ -20,7 +20,7 @@ body::before {
 }
 
 header {
-  position: relative;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -116,6 +116,25 @@ header {
   color: #01b1ab !important;
   border-color: #ffffff !important;
 }
+.dropdown-menu {
+  background-color: #01b1ab; /* Color de fondo del dropdown */
+  border: none; /* Eliminar borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+.dropdown-item {
+  color: #ffffff; /* Color del texto */
+  font-size: 28px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  font-family: "Arial", sans-serif; /* Tipografía */
+  text-shadow: 2px 5px 5px rgba(104, 104, 104, 0.2); /* Sombra de texto */
+}
+.dropdown-item:hover {
+  background-color: #007f7a; /* Color de fondo al pasar el mouse */
+  color: #ffffff; /* Mantener texto blanco al pasar el mouse */
+} /* Si deseas que el separador tenga un color específico */
+.dropdown-divider {
+  background-color: #ffffff; /* Cambia esto al color que desees */
+}
 /* ----- Sección Hero ----- */
 .hero {
   width: 100vw;
@@ -183,6 +202,8 @@ header {
   background-color: #019c96; /* Un tono más oscuro en hover */
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
 }
+
+
 
 /* Seccion del FOOTER*/
 .footer {
@@ -282,138 +303,55 @@ header {
   color: #666;
 }
 
-/* PERFIL DE USUARIO*/
-.nav {
-  display: flex;
-  gap: 20px;
-  font-size: 18px;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.nav-buttons button {
-  margin-left: 10px;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.nav-buttons .login {
-  background-color: white;
-  color: teal;
-}
-
-.nav-buttons .register {
-  background-color: teal;
-  color: white;
-}
-
-/* ---------- PERFIL CARDS---------- */
-.profile-container {
-  display: flex;
-  justify-content: center;
-  margin-top: -50px;
-  gap: 30px;
-  z-index: 1;
-  position: relative;
-}
-
-.cardp, .edit-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 350px;
-}
-
-.edit-card {
-  width: 500px;
-}
-
-.profile-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.profile-header img {
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-}
-
-.profile-info h3 {
-  margin: 0;
-}
-
-.cardp ul {
-  list-style: none;
-  padding: 0;
-}
-
-.cardp ul li {
-  margin: 15px 0;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.cardp ul li:hover {
-  color: teal;
-}
-
-.edit-form label {
-  display: block;
-  font-weight: bold;
-  margin: 10px 0 5px;
-}
-
-.edit-form input {
+/*ESTILOS PARA LA CAJA DE COMENTARIOS*/
+.comment-section {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
   border-radius: 5px;
 }
 
-.edit-form button {
-  margin-top: 20px;
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical; /* Permitir el redimensionamiento vertical */
+}
+
+.comment-form button {
+  align-self: flex-end;
   padding: 10px 20px;
-  background-color: teal;
+  background-color: #01b1ab;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-/* ---------- PERFIL MENU---------- */
-.menu-list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 500;
-  margin: 15px 0;
-  cursor: pointer;
+.comment-form button:hover {
+  background-color: #019c98;
 }
 
-.menu-list li i {
-  margin-right: 10px;
-  font-size: 16px;
-  color: teal;
+.comments-display {
+  margin-top: 20px;
 }
 
-.menu-list li .right-arrow {
-  margin-left: auto;
-  color: gray;
+.comment {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
 }
 
-.logout {
-  color: red !important;
+.comment p {
+  margin: 0;
 }

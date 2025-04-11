@@ -20,7 +20,7 @@ body::before {
 }
 
 header {
-  position: relative;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -116,6 +116,25 @@ header {
   color: #01b1ab !important;
   border-color: #ffffff !important;
 }
+.dropdown-menu {
+  background-color: #01b1ab; /* Color de fondo del dropdown */
+  border: none; /* Eliminar borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+.dropdown-item {
+  color: #ffffff; /* Color del texto */
+  font-size: 28px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  font-family: "Arial", sans-serif; /* Tipografía */
+  text-shadow: 2px 5px 5px rgba(104, 104, 104, 0.2); /* Sombra de texto */
+}
+.dropdown-item:hover {
+  background-color: #007f7a; /* Color de fondo al pasar el mouse */
+  color: #ffffff; /* Mantener texto blanco al pasar el mouse */
+} /* Si deseas que el separador tenga un color específico */
+.dropdown-divider {
+  background-color: #ffffff; /* Cambia esto al color que desees */
+}
 /* ----- Sección Hero ----- */
 .hero {
   width: 100vw;
@@ -132,6 +151,14 @@ header {
 /* Estilo específico para la pantalla 1 */
 .hero-pantalla1 {
   background: url("img/banner_principal.jpg") no-repeat center center/cover;
+}
+/* Estilo específico para la pantalla 2 */
+.hero-pantalla2 {
+  background: url("img/banner2.jpg") no-repeat center center/cover;
+}
+/* Estilo específico para la pantalla 3 */
+.hero-pantalla3 {
+  background: url("img/banner3.jpg") no-repeat center center/cover;
 }
 
 /* Contenedor del texto dentro del Hero */
@@ -174,56 +201,6 @@ header {
 .btn-hero:hover {
   background-color: #019c96; /* Un tono más oscuro en hover */
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* ----- Sección de Tarjetas ----- */
-.cards-section {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  margin: -50px auto 0;
-  /* 
-     margin-top: -50px para "superponer" ligeramente las tarjetas sobre 
-     la sección hero (si la imagen lo permite). Ajusta o quita si no lo deseas.
-  */
-  position: relative;
-  z-index: 1; /* Para que se muestren encima del Hero si se superponen */
-  width: 80%; /* Ajusta el ancho total */
-  max-width: 1200px;
-}
-
-/* Cada tarjeta individual */
-.card {
-  background-color: #fff;
-  width: 250px;
-  text-align: center;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Icono de la tarjeta */
-.card img {
-  width: 60px; /* Ajusta el tamaño del icono */
-  margin-bottom: 15px;
-}
-
-/* Título de la tarjeta */
-.card h3 {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Efecto hover en la tarjeta */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.container {
-  max-width: 80%; /* O el valor que prefieras */
 }
 
 /* Seccion del FOOTER*/
@@ -289,66 +266,173 @@ header {
   }
 }
 
-/* SECCION DE LA BASE DEL JUEGO YUUM (WORDLE PERO EN MAYA JEJE) */
-.game-container {
-  text-align: center;
-  background-color: #ffffff; /* Fondo blanco */
-  padding: 20px;
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  width: fit-content; /* Ajusta el ancho al contenido */
-  margin: 0 auto; /* Centra el contenedor */
-  margin-top: -80px;
+.card-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1200px;
+  margin: -100px auto 30px; /* Ajusta el margin-top negativo para superponer */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
   position: relative;
-  z-index: 10;
-  margin-bottom: 30px;
+  z-index: 10; /* Asegura que las tarjetas estén sobre el hero */
 }
-h1 {
+.card-image {
+  flex: 1;
+  background-color: #f1f1f1;
+}
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-text {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.card-text h2 {
+  margin-top: 0;
+  color: #333;
+}
+.card-text p {
+  color: #666;
+}
+
+/* PERFIL DE USUARIO*/
+.nav {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-buttons button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav-buttons .login {
+  background-color: white;
+  color: teal;
+}
+
+.nav-buttons .register {
+  background-color: teal;
+  color: white;
+}
+
+/* ---------- PERFIL CARDS---------- */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -300px;
+  gap: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.cardp, .edit-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 350px;
+}
+
+.edit-card {
+  width: 500px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-bottom: 20px;
 }
-.grid {
+
+.profile-header img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.profile-info h3 {
+  margin: 0;
+}
+
+.cardp ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cardp ul li {
+  margin: 15px 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cardp ul li:hover {
+  color: teal;
+}
+
+.edit-form label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ---------- PERFIL MENU---------- */
+.menu-list li {
   display: flex;
-  flex-direction: column;
-  gap: 20px; /* Espacio entre filas */
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  margin: 15px 0;
+  cursor: pointer;
 }
-.row {
-  display: flex;
-  justify-content: center; /* Centrar letras */
-  gap: 30px; /* Espacio entre letras */
+
+.menu-list li i {
+  margin-right: 10px;
+  font-size: 16px;
+  color: teal;
 }
-.letter {
-  width: 100px; /* Ancho de cada letra (ajustado) */
-  height: 100px; /* Altura de cada letra (ajustado) */
-  font-size: 36px; /* Tamaño de fuente (ajustado) */
-  text-align: center; /* Centrar texto */
-  background-color: #e0e0e0; /* Fondo gris claro */
-  border: 2px solid #ccc; /* Borde gris claro */
-  border-radius: 5px; /* Bordes redondeados */
-  outline: none; /* Sin contorno al enfocar */
+
+.menu-list li .right-arrow {
+  margin-left: auto;
+  color: gray;
 }
-.letter:focus {
-  border-color: #6c63ff; /* Color de borde al enfocar */
-}
-.keyboard {
-  margin-top: 30px; /* Espacio entre la cuadrícula y el teclado */
-  margin: 30px 30px 30px 30px;
-}
-.key {
-  width: 100px; /* Ancho de cada tecla (ajustado) */
-  height: 100px; /* Altura de cada tecla (ajustado) */
-  font-size: 24px; /* Tamaño de fuente (ajustado) */
-  margin-top: 20px; /* Espacio entre teclas */
-  background-color: #01b1ab; /* Color de fondo de las teclas */
-  color: white; /* Color del texto de las teclas */
-  border: none; /* Sin borde */
-  border-radius: 10px; /* Bordes redondeados */
-  cursor: pointer; /* Cambiar cursor a mano */
-  transition: background-color 0.2s; /* Transición suave para el color de fondo */
-}
-.key:hover {
-  background-color: #0097a7; /* Color de fondo al pasar el mouse */
-}
-.enter {
-  width: 100px; /* Ancho especial para la tecla ENTER */
-  text-align: center;
+
+.logout {
+  color: red !important;
 }

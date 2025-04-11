@@ -116,6 +116,25 @@ header {
   color: #01b1ab !important;
   border-color: #ffffff !important;
 }
+.dropdown-menu {
+  background-color: #01b1ab; /* Color de fondo del dropdown */
+  border: none; /* Eliminar borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+.dropdown-item {
+  color: #ffffff; /* Color del texto */
+  font-size: 28px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  font-family: "Arial", sans-serif; /* Tipografía */
+  text-shadow: 2px 5px 5px rgba(104, 104, 104, 0.2); /* Sombra de texto */
+}
+.dropdown-item:hover {
+  background-color: #007f7a; /* Color de fondo al pasar el mouse */
+  color: #ffffff; /* Mantener texto blanco al pasar el mouse */
+} /* Si deseas que el separador tenga un color específico */
+.dropdown-divider {
+  background-color: #ffffff; /* Cambia esto al color que desees */
+}
 /* ----- Sección Hero ----- */
 .hero {
   width: 100vw;

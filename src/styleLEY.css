@@ -116,6 +116,25 @@ header {
   color: #01b1ab !important;
   border-color: #ffffff !important;
 }
+.dropdown-menu {
+  background-color: #01b1ab; /* Color de fondo del dropdown */
+  border: none; /* Eliminar borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+.dropdown-item {
+  color: #ffffff; /* Color del texto */
+  font-size: 28px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  font-family: "Arial", sans-serif; /* Tipografía */
+  text-shadow: 2px 5px 5px rgba(104, 104, 104, 0.2); /* Sombra de texto */
+}
+.dropdown-item:hover {
+  background-color: #007f7a; /* Color de fondo al pasar el mouse */
+  color: #ffffff; /* Mantener texto blanco al pasar el mouse */
+} /* Si deseas que el separador tenga un color específico */
+.dropdown-divider {
+  background-color: #ffffff; /* Cambia esto al color que desees */
+}
 /* ----- Sección Hero ----- */
 .hero {
   width: 100vw;
@@ -132,14 +151,6 @@ header {
 /* Estilo específico para la pantalla 1 */
 .hero-pantalla1 {
   background: url("img/banner_principal.jpg") no-repeat center center/cover;
-}
-/* Estilo específico para la pantalla 2 */
-.hero-pantalla2 {
-  background: url("img/banner2.jpg") no-repeat center center/cover;
-}
-/* Estilo específico para la pantalla 3 */
-.hero-pantalla3 {
-  background: url("img/banner3.jpg") no-repeat center center/cover;
 }
 
 /* Contenedor del texto dentro del Hero */
@@ -184,6 +195,55 @@ header {
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* ----- Sección de Tarjetas ----- */
+.cards-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: -50px auto 0;
+  /* 
+     margin-top: -50px para "superponer" ligeramente las tarjetas sobre 
+     la sección hero (si la imagen lo permite). Ajusta o quita si no lo deseas.
+  */
+  position: relative;
+  z-index: 1; /* Para que se muestren encima del Hero si se superponen */
+  width: 80%; /* Ajusta el ancho total */
+  max-width: 1200px;
+}
+
+/* Cada tarjeta individual */
+.card {
+  background-color: #fff;
+  width: 250px;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icono de la tarjeta */
+.card img {
+  width: 60px; /* Ajusta el tamaño del icono */
+  margin-bottom: 15px;
+}
+
+/* Título de la tarjeta */
+.card h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Efecto hover en la tarjeta */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+  max-width: 80%; /* O el valor que prefieras */
+}
 
 /* Seccion del FOOTER*/
 .footer {
@@ -248,122 +308,61 @@ header {
   }
 }
 
-.card-container {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-  max-width: 1200px;
-  margin: -100px auto 30px; /* Ajusta el margin-top negativo para superponer */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #fff;
-  position: relative;
-  z-index: 10; /* Asegura que las tarjetas estén sobre el hero */
-}
-.card-image {
-  flex: 1;
-  background-color: #f1f1f1;
-}
-.card-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.card-text {
-  flex: 1;
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-.card-text h2 {
-  margin-top: 0;
-  color: #333;
-}
-.card-text p {
-  color: #666;
-}
+/* SECCION DE LEYENDAS */
 
-/* SECCION DE ESTILOS DE JUEGOS */
-.cards-container {
+.containerL {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: -70px; /* Ajusta el valor para superponer las tarjetas */
-  position: relative;
-  z-index: 1;
-}
-
-.game-card {
-  background-color: #00b3b3;
-  border-radius: 8px;
-  width: 300px;
-  min-height: 400px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-}
-
-.card-header {
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-.card-content {
-  background-color: #00b3b3;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 10px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.grid-item {
-  background-color: #ffffff;
-  border: 2px solid #ffffff;
-  width: 60px;
-  height: 60px;
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px; /* Ajusta la altura según tus necesidades */
-  width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
-}
-
-.icon img {
+  align-items: stretch; /* Alinea las columnas para que todas tengan la misma altura */
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
-}
-
-.play-button {
+  padding: 20px; /* Espaciado interno */
+  gap: 20px; /* Espacio entre columnas */
+  margin-top: -80px;
+  position: relative;
   background-color: white;
-  color: #00b3b3;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  border-radius: 30px;
+  margin-bottom: 30px;
 }
-
-.play-button:hover {
-  background-color: #e6e6e6;
+.column {
+  flex: 1; /* Cada columna ocupa el mismo espacio por defecto */
+  padding: 10px;
+  background-color: white; /* Fondo blanco para columnas */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.image-column {
+  display: flex;
+  justify-content: center; /* Centra la imagen */
+  align-items: center; /* Centra la imagen */
+}
+.image-column img {
+  width: 100%; /* Ajusta la imagen al 100% del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-height: 100%; /* Limita la altura máxima de la imagen */
+  border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+}
+.document-column {
+  flex: 2; /* Hace que esta columna sea más ancha */
+}
+.document-viewer {
+  width: 100%;
+  height: 100%; /* Ajusta la altura al 100% del contenedor */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+}
+.map-column {
+  flex: 1; /* Mantiene la misma proporción que la columna de imagen */
+}
+.map-viewer {
+  width: 100%;
+  height: 100%; /* Ajusta la altura al 100% del contenedor */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+} /* Estilos adicionales para hover */
+.column:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+  transform: translateY(
+    -5px
+  ); /* Mueve la columna hacia arriba al pasar el mouse */
+  transition: all 0.3s ease; /* Transición suave */
 }

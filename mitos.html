@@ -22,7 +22,7 @@
     />
 
     <!-- Conexion con CSS-->
-    <link rel="stylesheet" href="styleMIT.css" />
+    <link rel="stylesheet" href="src/styleMIT.css" />
   </head>
   <body>
     <header>
@@ -33,7 +33,7 @@
           >
             <!-- Logo con nombre al lado -->
             <div class="navbar-brand d-flex align-items-center">
-              <img src="img/logov2.png" alt="Logo" width="90" height="90" />
+              <img src="src/img/logov2.png" alt="Logo" width="90" height="90" />
               <span class="ms-2 brand-name">SPACE MAYA</span>
             </div>
             <!-- Lista de navegación -->
@@ -43,18 +43,52 @@
                 style="--bs-nav-link-color: #01b1ab"
               >
                 <li class="nav-item">
-                  <a class="nav-link custom-nav-link p-2" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link custom-nav-link p-2" href="#"
-                    >Mapa Interactivo</a
+                  <a class="nav-link custom-nav-link p-2" href="index.html"
+                    >Inicio</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link custom-nav-link p-2" href="#">Aprende</a>
+                  <a class="nav-link custom-nav-link p-2" href="mapa.html"
+                    >Mapa Interactivo</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle custom-nav-link"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-expanded="false"
+                    >Aprende</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item custom-nav-link" href="leyendas.html"
+                        >Leyendas</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item custom-nav-link" href="mitos.html"
+                        >Mitos</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item custom-nav-link" href="vocabulario.html"
+                        >Vocabulario</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item custom-nav-link" href="#"
+                        >Otra pagina jeje</a
+                      >
+                    </li>
+                  </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link custom-nav-link p-2" href="#">Juegos</a>
+                  <a class="nav-link custom-nav-link p-2" href="juegos.html"
+                    >Juegos</a
+                  >
                 </li>
               </ul>
             </div>
@@ -124,7 +158,7 @@
       <div class="footer-container">
         <!-- Primera columna con icono -->
         <div class="footer-col footer-col1">
-          <img src="img/logov2.png" alt="Tu imagen" class="footer-image" />
+          <img src="src/img/logov2.png" alt="Tu imagen" class="footer-image" />
         </div>
         <!-- Segunda columna con enlaces de navegación -->
         <div class="footer-col footer-col2">
